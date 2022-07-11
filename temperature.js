@@ -20,10 +20,10 @@ let temp = 32;
 temp = tofahrenheit(temp);
 console.log(temp);
 
-const tocelsius = (temp) => {
+function tocelsius(temp) {
     return (temp - 32) * (5/9);
 }
 
-const tofahrenheit = (temp) => {
+function tofahrenheit(temp) {
     return temp * 9 / 5 + 32;
 }

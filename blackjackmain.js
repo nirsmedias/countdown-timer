@@ -15,7 +15,7 @@ let playerEl = document.getElementById("player-el");
 
 playerEl.textContent = player.name + ": $" + player.chips;
 
-const getRandomCard = () => {
+function getRandomCard() {
     const randomNumber = Math.floor( Math.random()*13 ) + 1;
     if (randomNumber > 10) {
         return 10;
@@ -26,7 +26,7 @@ const getRandomCard = () => {
     }
 };
 
-const startGame = () => {
+function startGame() {
     isAlive = true;
     const firstCard = getRandomCard();
     const secondCard = getRandomCard();
@@ -35,7 +35,7 @@ const startGame = () => {
     renderGame();
 };
 
-const renderGame = () => {
+function renderGame() {
     cardsEl.textContent = "Cards: ";
     for (let i = 0; i < cards.length; i++) {
         cardsEl.textContent += cards[i] + " ";
@@ -54,7 +54,7 @@ const renderGame = () => {
     messageEl.textContent = message;
 };
 
-const newCard = () => {
+function newCard() {
     if (isAlive && !hasBlackJack) {
         const card = getRandomCard();
         sum += card;
