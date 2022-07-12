@@ -9,6 +9,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <link href="style.css" rel="stylesheet">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
+<script src="help.html" async></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light">
@@ -32,12 +33,15 @@
 <h1>Help</h1>
 <h2>I need Help, would you Help me?</h2>
 <p>Yes. Just send me your Problem through the Form below so I will be able to Help you with whatever situation you got yourself to.</p>
-<form name="contact" method="POST" data-netlify="true">
+<form name="contact" method="POST" data-netlify="true" onsubmit="acceptedcharsonly()">
     <p>
       <label>Your Name: <input type="text" name="name" required /></label>
     </p>
     <p>
       <label>Your Email: <input type="email" name="email" required /></label>
+    </p>
+    <p>
+      <label>Your Phone Number: <input type="tel" name="phonenumber" id="phone-number" required /></label>
     </p>
     <p>
       <label>Your Problem: <textarea name="problem" required></textarea></label>
